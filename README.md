@@ -40,27 +40,17 @@ Instead, it will copy all the configuration files and the transitive dependencie
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
 ## Features
-Tailwind Config
-Build Sign In/ Sign Up UX 
-Routing
-React forms
-Firebase configuration - Set up your own.env to add DB config
-Deploy app using Friebase
-Authentication using Firebase
-User Store and User Slice
-Update User Profile
-Register for OMDb api
-Get data from OMDb movie list API
-custom hook
-update store with movie Data
-Add main container and secondary container
-fetch data for trailer video
-embed youtube video with autoplay
-build secondary component
-made movie list
-made movie cards
-css
-fetch trending and popular movies
-GPT Search Page
-GPT Search Bar
-i18n
+- Build Sign In/ Sign Up UX 
+- Tailwind Config
+- Routing
+- React forms
+- Firebase configuration - Set up your own.env to add DB config
+- Deploy app using Friebase
+- Authentication using Firebase
+- User Store and User Slice
+- Update User Profile
+- Register for OMDb api
+- Embed youtube video with autoplay
+- GPT Search Page
+- GPT Search Bar
+- Localization i18n
