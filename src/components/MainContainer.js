@@ -28,7 +28,6 @@ const MainContainer = () => {
 
         if (data.Response === "True") {
           setMovieDetails(data);
-          console.log("Movie Details", data); 
         } else {
           console.error(data.Error);
         }

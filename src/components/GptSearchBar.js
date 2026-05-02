@@ -1,23 +1,45 @@
 import React, { useRef } from "react";
 import lang from "../utils/languageConstants";
-import { useSelector } from "react-redux";
-import openai from "../utils/openai";
+import { useSelector, useDispatch } from "react-redux";
+import { askLLM } from "../utils/openai";
+import { addgptSuggestedMovies } from "../utils/movieSlice";
 
 const GptSearchBar = () => {
+	const dispatch = useDispatch();
 	const langKey = useSelector((store) => store.config.lang);
 	const seachText = useRef(null);
+
+	const fetchMovieByName = async (movieName) => {
+		try {
+			const res = await fetch(
+				`https://www.omdbapi.com/?apikey=${process.env.REACT_APP_OMDB_API_KEY}&s=${movieName}&type=movie&plot=full`,
+			);
+			const data = await res.json();
+			return data;
+		} catch (err) {
+			console.error(err);
+			return null;
+		}
+	};
+
 	const handleGPTSearchClick = async () => {
-		console.log(seachText.current.value);
 
-		//Make an API call to GPT API
-		const response = await openai.responses.create({
-			model: "gpt-5-nano",
-			instructions: "Recommend movie names for the query",
-			input: seachText.current.value,
-		});
+		//Make an API call to OPENAI API
+		const result = await askLLM(seachText.current.value);
+		let movies = [];
+		const parsed = JSON.parse(result);
+		movies = parsed.movies;
 
-		console.log(response.output_text);
-		
+		//Get posters, title from OMDB
+		const omdbData = await fetchMoviesData(movies);
+
+		dispatch(addgptSuggestedMovies(omdbData));
+	};
+
+	const fetchMoviesData = async (movieNames) => {
+		const promises = movieNames.map((name) => fetchMovieByName(name));
+		const results = await Promise.all(promises);
+		return results.filter((movie) => movie && movie.Response === "True").flatMap((res) => res.Search || []);
 	};
 
 	return (
