@@ -8,10 +8,12 @@ import { useDispatch } from "react-redux";
 import { addUser, removeUser } from "../utils/userSlice";
 import { toggleGptSearchView } from "../utils/gptSlice";
 import { changeLanguage } from "../utils/configSlice";
+import lang from "../utils/languageConstants";
 const Header = () => {
 	const navigate = useNavigate();
 	const dispatch = useDispatch();
 	const user = useSelector((store) => store.user);
+	const langKey = useSelector((store) => store.config.lang);
 	const showGptSearch = useSelector((store) => store.gpt.showGptSearch);
 	const signOutUser = () => {
 		signOut(auth)
@@ -74,10 +76,9 @@ const Header = () => {
 
 			{user && (
 				<div className="flex p-2 gap-2">
-					{showGptSearch && (
-						<select
+					<select
 							onChange={handleLanguageChange}
-							className="p-2 m-2 bg-transparent text-red-500 rounded-lg"
+							className="p-2 m-2 bg-transparent text-red-500 rounded-lg cursor-pointer"
 						>
 							{supportedLanguages.map((opt) => (
 								<option key={opt.identifier} value={opt.id}>
@@ -85,12 +86,11 @@ const Header = () => {
 								</option>
 							))}
 						</select>
-					)}
 					<button
 						className="px-4 py-2 mx-2 bg-gray-400 text-white rounded-lg bg-opacity-90"
 						onClick={handleGPTSearchClick}
 					>
-						{ showGptSearch ? "Home Page" : "GPT Search"}
+						{showGptSearch ? lang[langKey].home : lang[langKey].gptSearch}
 					</button>
 
 					<img
@@ -102,7 +102,7 @@ const Header = () => {
 						className="px-4 py-2 mx-2 bg-[red] text-white rounded-lg"
 						onClick={signOutUser}
 					>
-						Sign Out
+						{lang[langKey].signOut}
 					</button>
 				</div>
 			)}
