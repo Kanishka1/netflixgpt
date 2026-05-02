@@ -14,7 +14,6 @@ const GptSearchBar = () => {
 			model: "gpt-5-nano",
 			instructions: "Recommend movie names for the query",
 			input: seachText.current.value,
-            max_tokens: 100
 		});
 
 		console.log(response.output_text);

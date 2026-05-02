@@ -1,5 +1,5 @@
 # NETFLIX- GPT
-[![Watch Demo](https://img.icons8.com/color/480/video.png)](https://drive.google.com/file/d/1z56bKzJVR1Dlyy29D-OsSnM6IcU_pEd4/view?usp=drive_link)
+[![Watch Demo](public/demo.png)](https://drive.google.com/file/d/1z56bKzJVR1Dlyy29D-OsSnM6IcU_pEd4/view?usp=drive_link)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
