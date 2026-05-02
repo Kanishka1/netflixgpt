@@ -1,5 +1,5 @@
 # NETFLIX- GPT
-[![Watch the demo]([https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID](https://drive.google.com/file/d/1z56bKzJVR1Dlyy29D-OsSnM6IcU_pEd4/view?usp=sharing))
+[![Watch the demo](https://drive.google.com/file/d/1z56bKzJVR1Dlyy29D-OsSnM6IcU_pEd4/view?usp=sharing)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
