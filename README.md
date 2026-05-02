@@ -1,11 +1,24 @@
 # NETFLIX- GPT
-## 🎥 Demo Video
+## 🎥 Click on the video to play
 
-👉 **[▶️ Watch Full Demo](https://drive.google.com/file/d/1z56bKzJVR1Dlyy29D-OsSnM6IcU_pEd4/view?usp=drive_link)**
-
-[![Watch Demo](public/demo.png)](https://drive.google.com/file/d/1z56bKzJVR1Dlyy29D-OsSnM6IcU_pEd4/view?usp=drive_link)
+[![Watch Demo](public/demo.png)](https://drive.google.com/file/d/1FGVb1V9kAGYPyJrJyT3CZJrXQJ_krdF8/view?usp=drive_link)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Features
+- Build Sign In/ Sign Up UX 
+- Tailwind Configuration
+- Routing
+- React forms
+- Firebase configuration - Set up your own.env to add DB config
+- Authentication using Firebase
+- User Store and User Slice
+- Update User Profile
+- Register for OMDb api
+- Embed Youtube Video with autoplay
+- GPT Search Page
+- GPT Search Bar
+- Localization i18n
 
 ## Available Scripts
 
@@ -31,31 +44,3 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Features
-- Build Sign In/ Sign Up UX 
-- Tailwind Config
-- Routing
-- React forms
-- Firebase configuration - Set up your own.env to add DB config
-- Deploy app using Friebase
-- Authentication using Firebase
-- User Store and User Slice
-- Update User Profile
-- Register for OMDb api
-- Embed youtube video with autoplay
-- GPT Search Page
-- GPT Search Bar
-- Localization i18n
