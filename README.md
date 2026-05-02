@@ -1,7 +1,7 @@
 # NETFLIX- GPT
 ## 🎥 Click on the video to play
 
-[![Watch Demo](public/demo.png)](https://drive.google.com/file/d/1FGVb1V9kAGYPyJrJyT3CZJrXQJ_krdF8/view?usp=drive_link)
+[![Watch Demo](public/demo.png)](https://drive.google.com/file/d/1A_sEt5ZfHu5cc9BHJxCyv6EcStWTybBq/view?usp=drive_link)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
